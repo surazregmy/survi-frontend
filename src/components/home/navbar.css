@@ -1,0 +1,9 @@
+@media (min-width: 992px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu {
+  margin: 10px;
+}

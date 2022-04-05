@@ -44,7 +44,6 @@ function CreateSurvey() {
   }
 
   const onFinish = (values) => {
-    // console.log(values.question.Question);
     createData(values);
   };
 

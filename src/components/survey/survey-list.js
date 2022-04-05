@@ -28,7 +28,7 @@ function SurveyList() {
   }
 
   const redirect = () => {
-    navigate("/create");
+    navigate("/admin/add-survey");
   };
 
   useEffect(() => {
@@ -85,7 +85,7 @@ function SurveyList() {
       <Button type="primary" onClick={redirect}>
         Add Survey
       </Button>
-      <Table dataSource={dataSource} columns={columns} />;
+      <Table dataSource={dataSource} columns={columns} />
     </div>
   );
 }
