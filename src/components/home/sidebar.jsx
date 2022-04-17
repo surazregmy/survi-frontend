@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Button, Menu, Row } from "antd";
-import { DatabaseOutlined, DashboardOutlined } from "@ant-design/icons";
+import {
+  DatabaseOutlined,
+  DashboardOutlined,
+  FileDoneOutlined,
+} from "@ant-design/icons";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import useAuth from "../../hooks/useAuth";
@@ -55,7 +59,7 @@ function SideBar() {
       style={{ height: "100%", borderRight: 0 }}
     >
       <Menu.Item key="15" icon={<DashboardOutlined />}>
-        <Link to="/">Dashboard</Link>
+        <Link to="/admin/dashboard">Dashboard</Link>
       </Menu.Item>
       <SubMenu key="stocks" icon={<DatabaseOutlined />} title="Survey">
         <Menu.Item key="1">
@@ -65,6 +69,9 @@ function SideBar() {
           <Link to="/admin/add-survey">Create Survey</Link>
         </Menu.Item>
       </SubMenu>
+      <Menu.Item key="18" icon={<FileDoneOutlined />}>
+        <Link to="/admin/responses">Responses</Link>
+      </Menu.Item>
       <Row justify="center">
         <Button
           onClick={() => logout()}

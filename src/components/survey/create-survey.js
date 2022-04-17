@@ -36,7 +36,7 @@ function CreateSurvey() {
         }
       )
       .then((response) => {
-        navigate("/");
+        navigate("/admin/surveys");
       })
       .catch((error) => {
         console.log(error);

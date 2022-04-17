@@ -1,5 +1,5 @@
 import { SearchOutlined, UserOutlined } from "@ant-design/icons";
-import { Avatar, Input, Layout, Menu, Row, Space } from "antd";
+import { Avatar, Image, Input, Layout, Menu, Row, Space } from "antd";
 import { Outlet } from "react-router-dom";
 import SideBar from "./sidebar";
 
@@ -28,14 +28,14 @@ function AdminPage() {
         <Header className="header">
           <Row justify="space-between">
             <div className="search_in_header">
-              <Input placeholder="Search" prefix={<SearchOutlined />} />
+              <Image width={50} src="/survi-logo.png" />
             </div>
             <div className="avatar_in_header">
               <Avatar icon={<UserOutlined />} />
             </div>
           </Row>
         </Header>
-        <Content style={{ margin: "15px 16px 0", height: "100vh" }}>
+        <Content style={{ margin: "90px", height: "100vh" }}>
           <Outlet />
         </Content>
         <Footer style={{ background: "#000000" }}>

@@ -1,6 +1,6 @@
 import { Layout, Menu, Table, Space, Button } from "antd";
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import {
   UserOutlined,
@@ -75,7 +75,7 @@ function SurveyList() {
           >
             Delete
           </a>
-          <a>Edit</a>
+          <Link to={"/admin/edit-survey/" + survey._id}>Edit</Link>
         </Space>
       ),
     },
